@@ -1,0 +1,9 @@
+---
+
+- hosts: all
+  become: no
+  gather_facts: no
+
+  tasks:
+  - name: winpint
+    win_ping:
