@@ -5,7 +5,7 @@
 
   tasks:
   - name: print files and folders in a dir
-    win_shell: "dir c:\windows"
+    win_shell: 'dir c:\windows'
     register: out
 
   - name: print 
