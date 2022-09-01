@@ -5,5 +5,10 @@
   gather_facts: no
 
   tasks:
-  - name: winping
-    win_ping:
+  - name: get all the installed softwares
+    win_shell: 'Get-ItemProperty "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*"'
+    register: out
+
+  - name: debug
+    debug:
+      var: out
