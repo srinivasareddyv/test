@@ -5,5 +5,5 @@
   gather_facts: no
 
   tasks:
-  - name: winpint
+  - name: winping
     win_ping:
