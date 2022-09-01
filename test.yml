@@ -6,7 +6,7 @@
 
   tasks:
   - name: get all the installed softwares
-    win_shell: 'Get-ItemProperty "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*"| select-object DisplayName, Publisher, UninstallString, DisplayVersion | Format-table -AutoSize'
+    win_shell: 'Get-ItemProperty "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*"| select-object DisplayName, Publisher, UninstallString, DisplayVersion | Format-List'
     register: out
 
   - name: debug
